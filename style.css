@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+ul{
+    padding: 0;
+}
+body{
+    background-color: black;
+    text-align: center;
+    
+}
+.game{
+    position: relative;
+}
+.game_main{
+    background-image: url(./img/background.png);
+    width: 576px;
+    height: 324px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.start{
+    margin-top: 30px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+.start i {
+    font-size: 18px;
+}
+.timer{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    width: 80px;
+    height: 43px;
+    line-height: 2;
+    border: 3px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.score{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 2;
+    font-size: 24px;
+    border: 3px solid black;
+    font-weight: bold;
+}
+.bug{
+    background-image: url(./img/bug.png);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+.carrot{ 
+    background-image: url(./img/carrot.png);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+.win{
+    background-color: #3e3c3c70;
+    width: 350px;
+    margin: 0 auto;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: none;
+}
+   
+.result{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result_title{
+    color: #fff;
+}
+.replay{
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 50%;
+
+
+}
+.replay i{
+    font-size: 28px;
+}
