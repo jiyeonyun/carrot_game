@@ -6,6 +6,8 @@ const gameresult = document.querySelector('.win')
 const result_title =document.querySelector('.result_title');
 const replay =document.querySelector('.replay');
 const cb =document.querySelector('.c_b');
+const audio_alert = new Audio('./sound/alert.wav');
+const audio_bg = new Audio('./sound/bg.mp3');
 function timer_f(){
     let time = 100;
     let msec ="";
@@ -17,6 +19,9 @@ function timer_f(){
         time --;
         if(time<0){
             clearInterval(x);
+            audio_bg.pause();
+            audio_alert.play();
+            audio_alert.loop =false;
             timer.innerHTML = "시간초과";
             gameresult.style.display = "block";
             result_title.innerHTML = "you lose 👻";
@@ -25,6 +30,7 @@ function timer_f(){
                 clearInterval(x);
                 timer.innerHTML = "00:00";
             });
+            
         }
     },100);
 }
@@ -44,11 +50,11 @@ function createBugCarrot(){
     carrot.style.transform = `translate(${x}px,${y}px)`
     cb.appendChild(bug);
     cb.appendChild(carrot);
-
-    return cb;
 }
 start_btn.addEventListener('click', ()=>{
+    audio_bg.play();
     timer_f();
     createBugCarrot();
 });
+
 
