@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrot</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d3a92e2a8f.js" crossorigin="anonymous"></script>
     <script src="./js/position.js" defer></script>
+    <title>Document</title>
 </head>
 <body>
-    <div class="game">
-    <section class="game_main">
-        <div class="wrap">
-        <button class="start" type="button">
+    <section class="game">
+        <header class="game__header">
+          <button type="button" class="start__button">
             <i class="fas fa-play"></i>
+          </button>
+          <div class="game__timer">00:00</div>
+          <div class="game__score">0</div>
+        </header>
+        <section class="game__field">
+            <img src="" alt="" style="display: none;">
+        </section>
+      </section>
+      <section class="modal">
+        <button class="replay__button">
+          <i class="fas fa-redo"></i>
         </button>
-            <span class="timer">00:00</span>
-            <span class="score">0</span>
-        </div>
-        <div class="c_b">
-        <!-- <a href="" class="bug"></a>
-        <a href="" class="carrot"></a> -->
-    </div>
-    </section>
-    <section class="win">
-        <div class="result">
-            <h1 class="result_title">you win🌟</h1>
-            <button class="replay">
-                <i class="fas fa-reply"></i>
-            </button>
-        </div>
-    </section>
-</div>
-
+        <span class="modal__message">You win~~🎉</span>
+      </section>
 </body>
 </html>
