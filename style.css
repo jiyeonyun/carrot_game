@@ -7,117 +7,79 @@ ul{
 body{
     background-color: black;
     text-align: center;
-    
+    position: relative;
+}
+img{
+    width: 40px;
+    height: 40px;
+    z-index: 100;
 }
 .game{
-    position: relative;
+margin: 0 auto;
+background-image: url(./img/background.png);
+width: 576px;
+height: 324px;
+background-size: contain;
+background-repeat: no-repeat;
+position: relative;
 }
-.game_main{
-    background-image: url(./img/background.png);
-    width: 576px;
-    height: 324px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    border-radius: 4px;
-    overflow: hidden;
-    z-index: 101;
-} 
-.wrap{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.game__header{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    z-index: 2;
-    position: relative;
 }
-.start{
-    margin-top: 10px;
-    width: 100px;
-    height: 50px;
-    border: 3px solid black;
-    border-radius: 5px;
-    background-color: blanchedalmond;
-    cursor: pointer;
+.start__button{
+width: 40px;
+height: 40px;
+border: 2px solid black;
+border-radius: 4px;
+background-color: blanchedalmond;
+margin-bottom: 10px;
+cursor: pointer;
 }
-.start i {
-    font-size: 18px;
+.game__timer{
+background-color: white;
+width: 50px;
+height: 30px;
+line-height: 2;
+border: 2px solid black;
+border-radius: 4px;
+margin-bottom: 10px;
 }
-.timer{
-    margin-top: 10px;
-    background-color: whitesmoke;
-    width: 80px;
-    height: 43px;
-    line-height: 2;
-    border: 3px solid black;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.score{
-    margin-top: 10px;
-    background-color: whitesmoke;
+.game__score{
+    background-color: white;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    line-height: 1.5;
-    font-size: 18px;
-    border: 3px solid black;
-    font-weight: bold;
+    line-height: 2;
+    border: 2px solid black;
+    border-radius: 50%
 }
-.bug{
-    background-image: url(./img/bug.png);
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-size: contain;
-    z-index: 100;
+.game__field{
+    height: 205px;
+    position: relative;
 }
-.carrot{ 
-    background-image: url(./img/carrot.png);
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-size: contain;
-    z-index: 100;
+.modal{ 
+top: 0;
+width: 576px;
+height: 324px;
+background-color: #10101059;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: absolute;
+display: none;
+left: calc(100%/2 - 289px);
+z-index: 200;
 }
-.win{
-    background-color: #3e3c3c70;
-    width: 350px;
-    margin: 0 auto;
-    height: 200px;
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    display: none;
-    z-index: 1000; 
-}
-   
-.result{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.result_title{
-    color: #fff;
-}
-.replay{
-    width: 50px;
-    height: 50px;
-    border: 3px solid black;
-    border-radius: 50%;
-
+.replay__button{
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
 
 }
-.replay i{
-    font-size: 28px;
-}
-.c_b{
-    width: 576px;
-    height: 50%;
-    position: absolute;
-    z-index: 1;
+.modal__message{
+
 }
