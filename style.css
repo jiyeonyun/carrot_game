@@ -21,7 +21,8 @@ body{
     margin: 0 auto;
     border-radius: 4px;
     overflow: hidden;
-}
+    z-index: 101;
+} 
 .wrap{
     display: flex;
     flex-direction: column;
@@ -71,6 +72,7 @@ body{
     width: 50px;
     height: 50px;
     background-size: contain;
+    z-index: 100;
 }
 .carrot{ 
     background-image: url(./img/carrot.png);
@@ -78,6 +80,7 @@ body{
     width: 50px;
     height: 50px;
     background-size: contain;
+    z-index: 100;
 }
 .win{
     background-color: #3e3c3c70;
@@ -88,6 +91,7 @@ body{
     top: 30%;
     left: 30%;
     display: none;
+    z-index: 1000; 
 }
    
 .result{
