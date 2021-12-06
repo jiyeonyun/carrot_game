@@ -17,8 +17,8 @@ function timer_f(){
     let time = 100;
     let msec ="";
     let sec = "";
+    
     let x = setInterval(function(){
-        
         sec = parseInt(time / 10);
         msec = time%10;
         gameTimer.innerHTML = "0" + sec + ":"+ "0" +msec
@@ -34,12 +34,15 @@ function timer_f(){
             audio_bg.pause();
 
             replayBtn.addEventListener('click',()=>{
-                modal.style.display = "none";
-                clearInterval(x);
-                gameTimer.innerHTML = "00:00";
-                start.firstElementChild.setAttribute('class','fas fa-play')
+                location.reload();
             });
         }
+        if(modal.style.display == 'flex'){
+            clearInterval(x);
+            gameTimer.innerHTML = "replay?🐶";
+            audio_bg.pause();
+        }
+       
     },100);
 }
 
@@ -93,27 +96,27 @@ function addItem(className, count, imgPath) {
             
             gameScore.innerHTML =`${carrotcount}`; 
                 if(carrotcount == 0){
-                    console.log('0입니다');
                     modal.style.display = 'flex';
                     audio_bg.pause();
                     audio_win.play();
+
+                    replayBtn.addEventListener('click',()=>{
+                        location.reload();
+                    });
                 } 
         }
         if(e.target.className == 'bug'){
-            gameTimer.innerHTML = "게임오버";
             modal.style.display = "flex";
             modalMessage.innerHTML = "you lose 👻";
             audio_bg.pause();
             audio_bug.play();
 
             replayBtn.addEventListener('click',()=>{
-                modal.style.display = "none";
-                gameTimer.innerHTML = "00:00";
-                start.firstElementChild.setAttribute('class','fas fa-play')
-                this.remove();
+                location.reload();
             });
         }
         
     });
     
+
 
