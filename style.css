@@ -1,6 +1,16 @@
 *{
     box-sizing: border-box;
+    font-family: 'KOTRAHOPE';
 }
+
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 ul{
     padding: 0;
 }
@@ -13,6 +23,10 @@ img{
     width: 40px;
     height: 40px;
     z-index: 100;
+    transition: all 0.5s;
+}
+img:hover{
+    transform: scale(1.1);
 }
 .game{
 margin: 0 auto;
@@ -38,10 +52,14 @@ border-radius: 4px;
 background-color: blanchedalmond;
 margin-bottom: 10px;
 cursor: pointer;
+transition: all 0.2s;
+}
+.start__button:hover{
+    background-color: #ffd4ae;
 }
 .game__timer{
 background-color: white;
-width: 50px;
+width: 70px;
 height: 30px;
 line-height: 2;
 border: 2px solid black;
@@ -50,11 +68,12 @@ margin-bottom: 10px;
 }
 .game__score{
     background-color: white;
-    width: 30px;
-    height: 30px;
-    line-height: 2;
+    width: 35px;
+    height: 35px;
+    line-height: 2.2;
     border: 2px solid black;
-    border-radius: 50%
+    border-radius: 50%;
+    font-weight: bold;
 }
 .game__field{
     height: 205px;
@@ -64,22 +83,33 @@ margin-bottom: 10px;
 top: 0;
 width: 576px;
 height: 324px;
-background-color: #10101059;
+background-color: #1010108f;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 position: absolute;
 display: none;
-left: calc(100%/2 - 289px);
+left: calc(100%/2 - 288px);
 z-index: 200;
 }
 .replay__button{
 width: 50px;
 height: 50px;
 margin-bottom: 20px;
-
+border: 2px solid black;
+border-radius: 50%;
+background-color: #ffc962;
+transition: all 1s;
+}
+.replay__button:hover{
+    
+    transform: scale(1.2);
 }
 .modal__message{
-
+    
+    font-size: 31px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1px #000;
 }
